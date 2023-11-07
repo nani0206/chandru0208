@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit Converter</title>
+<style>
+    body{
+        background-image: url(https://www.asutpp.com/wp-content/uploads/2023/08/mm-to-cm-converter.jpg);
+         background-repeat: no-repeat;
+        background-size: 1750px;
+        color:darkorange;
+      }
+
+</style>
+</head>
+<body>
+  <h1>Unit Converter</h1>
+  
+  <label for="inputValue">Enter a value:</label>
+  <input type="text" id="inputValue">
+  
+  <label for="unitType">Select a unit type:</label>
+  <select id="unitType">
+    <option value="mm">Millimeters (mm)</option>
+    <option value="cm">Centimeters (cm)</option>
+    <option value="km">Kilometers (km)</option>
+  </select>
+  
+  <button onclick="convert()">Convert</button>
+  
+  <h2>Result:</h2>
+  <div id="result"></div>
+
+  <script>
+    function convert() {
+      var inputValue = parseFloat(document.getElementById("inputValue").value);
+      var unitType = document.getElementById("unitType").value;
+      var result = 0;
+
+      switch (unitType) {
+        case "mm":
+          result = inputValue / 1000;
+          break;
+        case "cm":
+          result = inputValue / 100;
+          break;
+        case "km":
+          result = inputValue * 1000;
+          break;
+      }
+
+      document.getElementById("result").innerHTML = result + " " + unitType;
+    }
+  </script>
+</body>
+</html>
+
+

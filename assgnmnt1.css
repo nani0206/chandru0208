@@ -1,0 +1,13 @@
+#loveyou{
+    font-size: 25px; 
+}
+#hateyou{
+    font-size: 10px;
+}
+*{
+    text-align: center;
+}
+.a:hover{
+    color: blue;
+    text-decoration: solid;
+}

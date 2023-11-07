@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>money bank--</title>
+</head>
+<style>
+    body{
+        background-image: url(https://i.pinimg.com/originals/b8/44/44/b8444480aa259b1d0dcb63819a145487.jpg);
+            background-repeat: no-repeat;
+        background-size: 1750px;
+        color:darkorange;
+      }
+
+</style>
+
+
+
+</head>
+<style>
+   
+    div {
+        width: 250px;
+        height: auto;
+        background-color: #f2f2f2;
+        margin: 15% auto;
+        border: 2px solid blueviolet;
+        border-bottom: 0;
+        text-align: center;
+        color: blue;
+
+
+
+
+
+    }
+
+    button {
+        color: blue;
+        background-color: blanchedalmond;
+    }
+
+    input {
+        color: blue;
+        background-color: blanchedalmond;
+    }
+</style>
+
+<body>
+
+    <div class="converter">
+        <h2>Currency Converter</h2>
+        <label for="inr">INR</label><br>
+        <input type="number" id="inr" placeholder="Enter amount in INR">
+        <br>
+        <button onclick="convertToUSD()">Convert to USD</button><br>
+        <label for="usd">USD</label><br>
+        <input type="number" id="usd" placeholder="Enter amount in USD">
+        <br>
+        <button onclick="convertToINR()">Convert to INR</button>
+        <div class="result" id="result"></div>
+    </div>
+
+
+    <script>
+        function convertToUSD() {
+            var inrAmount = document.getElementById("inr").value;
+            var usdAmount = inrAmount / 73.5;
+            document.getElementById("usd").value = usdAmount.toFixed(2);
+        }
+
+        function convertToINR() {
+            var usdAmount = document.getElementById("usd").value;
+            var inrAmount = usdAmount * 73.5;
+            document.getElementById("inr").value = inrAmount.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>
+
+
+</body>
+
+</html>

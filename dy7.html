@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Unit Converter with jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body{
+            background-image: url(https://convertermaniacs.com/images/mm-to-cm.png);
+                 background-repeat: no-repeat;
+            background-size: 1750px;
+            color:darkorange;
+          }
+    
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#convertButton").click(function () {
+                var mm = parseFloat($("#mmInput").val());
+                var cm = mm / 10;
+               
+                $("#cmOutput").text(cm + " cm");
+               
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Unit Converter </h1>
+
+    <label for="mmInput">Enter Length in Millimeters:</label>
+    <input type="text" id="mmInput">
+    <button id="convertButton">Convert</button>
+
+  
+    <p id="cmOutput"></p>
+   
+</body>
+
+</html>

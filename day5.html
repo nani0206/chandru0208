@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voter Validation</title>
+    <style>
+        body{
+            background-image: url(data:image/png;base64,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);
+            background-repeat: no-repeat;
+            background-size: 1750px;
+            color:darkorange;
+          }
+
+    </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;         
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Voter Validation</h2>
+        <label for="age">Enter your age:</label>
+        <input type="number" id="age" min="0">
+        <button onclick="validateAge()">Check Eligibility</button>
+        <p id="result"></p>
+        <a href="55.html">innu ninge intrest idre tap here</a>
+    </div>
+
+    <script>
+        function validateAge() {
+            var age = document.getElementById("age").value;
+            var resultElement = document.getElementById("result");
+
+            if (age >= 18) {
+                resultElement.innerText = " shabash bettaYou are eligible to vote!";
+            } else {
+                resultElement.innerText = "Hey Chinna Nen Innu 18 Agilla kano.";
+            }
+        }
+    </script>
+</body>
+
+</html>
